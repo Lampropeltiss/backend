@@ -1,0 +1,119 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+
+# Virtual Environment
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.ropeproject/
+.spyderproject/
+.spyproject/
+
+# Django
+*.log
+*.pot
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+/media/
+/staticfiles/
+/static/
+
+# Environment
+.env
+.env.local
+.env.production
+.env.development
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Testing
+.coverage
+coverage/
+htmlcov/
+.tox/
+.pytest_cache/
+.hypothesis/
+*.cover
+nosetests.xml
+
+# Package managers
+pip-log.txt
+pip-delete-this-directory.txt
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+develop-eggs/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+*.tar.gz
+*.zip
+
+# OS
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+*.pid
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Misc
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+*.temp
+.cache/
+.mypy_cache/
+.dmypy.json
+pyre/
+*.pyre/
+.github/
+
+# Project specific
+media/
+static/
+staticfiles/
+.idea/
+.vscode/
+__pycache__/
+*.pyc
