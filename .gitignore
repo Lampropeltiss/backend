@@ -10,7 +10,6 @@ __pycache__/
 venv/
 .venv/
 django_proj/env/
-django_proj/env/
 env.bak/
 
 # IDE
@@ -113,7 +112,5 @@ pyre/
 media/
 static/
 staticfiles/
-.idea/
-.vscode/
-__pycache__/
 *.pyc
+/project_structure.txt
