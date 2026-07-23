@@ -9,8 +9,8 @@ __pycache__/
 # Virtual Environment
 venv/
 .venv/
-ENV/
-env/
+django_proj/env/
+django_proj/env/
 env.bak/
 
 # IDE
@@ -34,7 +34,7 @@ db.sqlite3-journal
 /static/
 
 # Environment
-.env
+django_proj/.env
 .env.local
 .env.production
 .env.development
