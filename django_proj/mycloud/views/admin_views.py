@@ -14,21 +14,21 @@ class UserListView(APIView):
     permission_classes = [IsAdminUser]
 
     def get(self, request):
-        users = User.objects.all()
+        # Сортируем сразу в запросе к БД
+        users = User.objects.all().order_by('id')
         result = []
         for user in users:
-            # Подсчет файлов и их общего размера
             files = user.files.all()
             total_size = sum(f.size for f in files)
             result.append({
-                'id'          : user.id,
-                'username'    : user.username,
-                'full_name'   : user.full_name,
-                'email'       : user.email,
-                'is_staff'    : user.is_staff,
-                'file_count'  : files.count(),
-                'total_size'  : total_size,
-                'storage_path': f'storage/user_{user.id}/'
+                'id': user.id,
+                'username': user.username,
+                'full_name': user.full_name,
+                'email': user.email,
+                'is_staff': user.is_staff,
+                'file_count': files.count(),
+                'total_size': total_size,
+                # 'storage_path': f'storage/user_{user.id}/'
             })
         return Response(result)
 

@@ -1,9 +1,12 @@
 from django.contrib.auth import get_user_model
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth import authenticate, login
 import re
+from django.contrib.auth import logout
 
 User = get_user_model()
 
@@ -67,9 +70,6 @@ class LoginView(APIView):
             })
         return Response({'error': 'Неверный логин или пароль'},
                         status=status.HTTP_401_UNAUTHORIZED)
-
-
-from django.contrib.auth import logout
 
 
 class LogoutView(APIView):

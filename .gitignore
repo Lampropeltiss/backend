@@ -114,3 +114,4 @@ static/
 staticfiles/
 *.pyc
 /project_structure.txt
+/storage/
