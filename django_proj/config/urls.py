@@ -19,11 +19,12 @@ from django.urls import path
 
 from django_proj.mycloud.views import (
     RegisterView, LoginView, LogoutView,
-    UserListView, UserDeleteView,
+    UserListView, UserDeleteView, UserToggleAdminStatusView,
     FileListView, FileUploadView, FileDownloadView,
     SharedFileDownloadView, FileDeleteView, FileRenameView,
     FileCommentView, FileGenerateLinkView
 )
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -33,6 +34,7 @@ urlpatterns = [
     path('api/logout/', LogoutView.as_view()),
     path('api/users/', UserListView.as_view()),
     path('api/users/<int:user_id>/', UserDeleteView.as_view()),
+    path('api/users/<int:user_id>/toggle-admin/', UserToggleAdminStatusView.as_view()),
 
     # Файлы
     path('api/files/', FileListView.as_view()),
@@ -42,6 +44,7 @@ urlpatterns = [
     path('api/files/<int:file_id>/rename/', FileRenameView.as_view()),
     path('api/files/<int:file_id>/comment/', FileCommentView.as_view()),
     path('api/files/<int:file_id>/generate-link/', FileGenerateLinkView.as_view()),
+    path('share/<str:token>/', SharedFileDownloadView.as_view()),
 
     # Публичная ссылка
     path('share/<str:token>/', SharedFileDownloadView.as_view()),
