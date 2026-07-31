@@ -115,3 +115,5 @@ staticfiles/
 *.pyc
 /project_structure.txt
 /storage/
+/backend_project_structure.txt
+/.env
