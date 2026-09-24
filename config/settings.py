@@ -13,11 +13,12 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_URL = os.getenv("DJANGO_BASE_URL", "http://localhost:8000")
 
-load_dotenv()
 
 MEDIA_ROOT = os.getenv('MEDIA_ROOT', str(BASE_DIR / "storage"))
 
