@@ -4,20 +4,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('mycloud', '0001_initial'),
+        ("mycloud", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='user',
-            name='storage_path',
+            model_name="user",
+            name="storage_path",
             field=models.CharField(blank=True, max_length=255, unique=True),
         ),
         migrations.AddField(
-            model_name='userfile',
-            name='file_path',
+            model_name="userfile",
+            name="file_path",
             field=models.CharField(blank=True, max_length=500),
         ),
     ]

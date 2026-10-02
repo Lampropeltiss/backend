@@ -1,19 +1,34 @@
 # views/__init__.py
-from .auth_views import RegisterView, LoginView, LogoutView
-from .admin_views import UserListView, UserDeleteView, UserToggleAdminStatusView
+from .admin_views import UserDeleteView, UserListView, UserToggleAdminStatusView
+from .auth_views import LoginView, LogoutView, RegisterView, csrf
 from .file_views import (
-    FileListView, FileUploadView, FileDownloadView,
-    SharedFileDownloadView, FileDeleteView, FileRenameView,
-    FileCommentView, FileGenerateLinkView
+    FileCommentView,
+    FileDeleteView,
+    FileDownloadView,
+    FileGenerateLinkView,
+    FileListView,
+    FileRenameView,
+    FileUploadView,
+    SharedFileDownloadView,
 )
 
 __all__ = [
     # Auth
-    'RegisterView', 'LoginView', 'LogoutView',
+    "RegisterView",
+    "LoginView",
+    "LogoutView",
+    "csrf",
     # Admin
-    'UserListView', 'UserDeleteView', 'UserToggleAdminStatusView',
+    "UserListView",
+    "UserDeleteView",
+    "UserToggleAdminStatusView",
     # Files
-    'FileListView', 'FileUploadView', 'FileDownloadView',
-    'SharedFileDownloadView', 'FileDeleteView', 'FileRenameView',
-    'FileCommentView', 'FileGenerateLinkView',
+    "FileListView",
+    "FileUploadView",
+    "FileDownloadView",
+    "SharedFileDownloadView",
+    "FileDeleteView",
+    "FileRenameView",
+    "FileCommentView",
+    "FileGenerateLinkView",
 ]

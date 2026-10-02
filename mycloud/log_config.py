@@ -1,4 +1,5 @@
-from mycloud.RainbowLogger import run_rainbow
 import logging
+
+from mycloud.rainbow_logger import run_rainbow
 
 logger = run_rainbow(logging.DEBUG)

@@ -1,5 +1,6 @@
 import os
 import uuid
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -13,7 +14,7 @@ class User(AbstractUser):
         if not self.storage_path:
             # Используем UUID для имени папки
             folder_uuid = uuid.uuid4().hex[:16]
-            self.storage_path = f'{folder_uuid}'
+            self.storage_path = f"{folder_uuid}"
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -39,11 +40,11 @@ def user_storage_path(instance, filename):
 
 
 class UserFile(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='files')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="files")
     file = models.FileField(upload_to=user_storage_path)
     original_name = models.CharField(max_length=255)
     size = models.BigIntegerField(default=0)
-    comment = models.TextField(blank=True, default='')
+    comment = models.TextField(blank=True, default="")
     upload_date = models.DateTimeField(auto_now_add=True)
     last_download_date = models.DateTimeField(null=True, blank=True)
     download_link = models.CharField(max_length=255, unique=True, blank=True)
